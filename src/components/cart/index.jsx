@@ -8,7 +8,7 @@ import { selectPriceTotal } from "../../redux/cart/cart.selectors";
 
 const Cart = ({ isVisible, setIsVisible }) => {
   const handleEscapeAreaClick = () => setIsVisible(false);
-  const { products } = useSelector((rootReducer) => rootReducer.cartReducer);
+  const { products } = useSelector((state) => state.cartReducer);
 
   const priceTotal = useSelector(selectPriceTotal);
 
